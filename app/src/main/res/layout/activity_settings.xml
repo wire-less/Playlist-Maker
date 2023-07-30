@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="4dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:backgroundTint="@color/white"
+        app:icon="@drawable/settings_back_icon"
+        app:iconGravity="start"
+        app:iconTint="@color/yp_black"
+        android:text="@string/settings_text"
+        android:textAlignment="viewStart"
+        android:textColor="@color/yp_black"
+        android:textSize="22sp"
+        android:textAllCaps="false"
+        app:cornerRadius="0dp" />
+
+    <Switch
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:text="@string/set_dark_theme_text"
+        android:textColor="@color/yp_black"
+        android:textAllCaps="false"
+        android:textSize="16sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:backgroundTint="@color/white"
+        app:icon="@drawable/settings_share_app_icon"
+        app:iconGravity="end"
+        app:iconTint="@color/yp_black"
+        android:textAlignment="viewStart"
+        android:text="@string/set_share_app_text"
+        android:textColor="@color/yp_black"
+        android:textAllCaps="false"
+        android:textSize="16sp"  />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:backgroundTint="@color/white"
+        app:icon="@drawable/settings_call_support_icon"
+        app:iconGravity="end"
+        app:iconTint="@color/yp_black"
+        android:textAlignment="viewStart"
+        android:text="@string/set_call_support_text"
+        android:textColor="@color/yp_black"
+        android:textAllCaps="false"
+        android:textSize="16sp"  />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:backgroundTint="@color/white"
+        app:icon="@drawable/settings_user_agreement_icon"
+        app:iconGravity="end"
+        app:iconTint="@color/yp_black"
+        android:textAlignment="viewStart"
+        android:text="@string/set_users_agreement_text"
+        android:textColor="@color/yp_black"
+        android:textAllCaps="false"
+        android:textSize="16sp"  />
+</LinearLayout>
