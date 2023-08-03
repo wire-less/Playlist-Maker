@@ -1,5 +1,6 @@
 package com.example.playlistmaker
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -9,7 +10,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+/*
         val searchButton = findViewById<View>(R.id.search)
         val searchButtonClickListener: View.OnClickListener = object : View.OnClickListener {
             override fun onClick(v: View?) {
@@ -17,15 +18,26 @@ class MainActivity : AppCompatActivity() {
             }
         }
         searchButton.setOnClickListener(searchButtonClickListener)
+ */
+
+        val searchButton = findViewById<View>(R.id.search)
+        searchButton.setOnClickListener {
+            val searchIntent = Intent(this, SearchActivity::class.java)
+            startActivity(searchIntent)
+        }
 
         val mediaButton = findViewById<View>(R.id.media)
         mediaButton.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Нажали на кнопку MEDIA", Toast.LENGTH_SHORT).show()
+            val mediaIntent = Intent(this, MediaActivity::class.java)
+            startActivity(mediaIntent)
+ //           Toast.makeText(this@MainActivity, "Нажали на кнопку MEDIA", Toast.LENGTH_SHORT).show()
         }
 
         val settingsButton = findViewById<View>(R.id.settings)
         settingsButton.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Нажали на кнопку SETTINGS", Toast.LENGTH_SHORT).show()
+            val settingsIntent = Intent(this, SettingsActivity::class.java)
+            startActivity(settingsIntent)
+ //           Toast.makeText(this@MainActivity, "Нажали на кнопку SETTINGS", Toast.LENGTH_SHORT).show()
         }
 
     }
