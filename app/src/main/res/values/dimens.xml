@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activityMaintextSize">23sp</dimen>
+    <dimen name="activitySettingsTextSize">16sp</dimen>
+    <dimen name="activityMainCornerRadius">16dp</dimen>
+</resources>
