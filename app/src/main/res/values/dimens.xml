@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="activityMaintextSize">23sp</dimen>
-    <dimen name="activitySettingsTextSize">16sp</dimen>
     <dimen name="activityMainCornerRadius">16dp</dimen>
+    <dimen name="activitySettingsTextSize">16sp</dimen>
+    <dimen name="activitySettingsButtonSize">61dp</dimen>
+    <dimen name="activitySettingsLeftMargin">16dp</dimen>
+    <dimen name="activitySettingsTopMargin">21dp</dimen>
 </resources>

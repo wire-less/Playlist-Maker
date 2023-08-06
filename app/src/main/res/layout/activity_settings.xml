@@ -7,15 +7,13 @@
     android:background="@color/white"
     android:orientation="vertical"
     android:outlineProvider="none"
-    android:padding="40dp"
     tools:context=".SettingsActivity">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/settings_back"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="48dp"
         android:backgroundTint="@color/white"
-        android:insetBottom="6dp"
         android:text="@string/settings_text"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
@@ -30,9 +28,9 @@
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="@dimen/activitySettingsButtonSize"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="@dimen/activitySettingsTopMargin"
         android:checked="false"
         android:fontFamily="sans-serif-medium"
         android:text="@string/set_dark_theme_text"
@@ -46,11 +44,10 @@
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginTop="20dp"
+        android:layout_height="@dimen/activitySettingsButtonSize"
+        android:layout_marginLeft="@dimen/activitySettingsLeftMargin"
+        android:layout_marginTop="@dimen/activitySettingsTopMargin"
         android:backgroundTint="@color/white"
-        android:outlineProvider="none"
         android:text="@string/set_share_app_text"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
@@ -63,9 +60,9 @@
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginTop="20dp"
+        android:layout_height="@dimen/activitySettingsButtonSize"
+        android:layout_marginLeft="@dimen/activitySettingsLeftMargin"
+        android:layout_marginTop="@dimen/activitySettingsTopMargin"
         android:backgroundTint="@color/white"
         android:text="@string/set_call_support_text"
         android:textAlignment="viewStart"
@@ -79,9 +76,9 @@
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginTop="20dp"
+        android:layout_height="@dimen/activitySettingsButtonSize"
+        android:layout_marginLeft="@dimen/activitySettingsLeftMargin"
+        android:layout_marginTop="@dimen/activitySettingsTopMargin"
         android:backgroundTint="@color/white"
         android:text="@string/set_users_agreement_text"
         android:textAlignment="viewStart"
