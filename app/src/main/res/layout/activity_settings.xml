@@ -19,10 +19,9 @@
         android:textColor="@color/yp_black"
         android:background="@color/white"
         android:textSize="22sp"
-        android:visibility="visible"
-        app:cornerRadius="0dp"
         app:icon="@drawable/settings_back_icon"
         app:iconGravity="start"
+        app:iconSize="@dimen/anyActivityBackArrowSize"
         app:iconTint="@color/yp_black" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial style="@style/SettingsActivityButtonStyle"

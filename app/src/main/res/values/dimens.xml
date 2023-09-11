@@ -6,4 +6,6 @@
     <dimen name="activitySettingsButtonSize">61dp</dimen>
     <dimen name="activitySettingsLeftMargin">16dp</dimen>
     <dimen name="activitySettingsTopMargin">21dp</dimen>
+    <dimen name="anyActivityBackArrowSize">48dp</dimen>
+    <dimen name="searchActivitySearchIconSize">14dp</dimen>
 </resources>
