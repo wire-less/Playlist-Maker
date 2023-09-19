@@ -19,7 +19,7 @@ class SettingsActivity : AppCompatActivity() {
         settingsShareButton.setOnClickListener {
             val settingsShareIntent = Intent().apply {
                 action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_TEXT, "https://practicum.yandex.ru/android-developer/")
+                putExtra(Intent.EXTRA_TEXT,getString(R.string.settingsShareButtonPrompt))
                 type = "text/plain"
             }
             startActivity(settingsShareIntent)
@@ -28,20 +28,18 @@ class SettingsActivity : AppCompatActivity() {
         // Кнопка написать в поддержку
         val settingsCallSupportButton = findViewById<View>(R.id.settings_call_support)
         settingsCallSupportButton.setOnClickListener {
-            val subject = "Сообщение разработчикам и разработчицам приложения Playlist Maker"
-            val message = "Спасибо разработчикам и разработчицам за крутое приложение!"
             val settingsCallSupportIntent = Intent(Intent.ACTION_SENDTO)
             settingsCallSupportIntent.data = Uri.parse("mailto:")
-            settingsCallSupportIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("monitor1010@yandex.ru"))
-            settingsCallSupportIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
-            settingsCallSupportIntent.putExtra(Intent.EXTRA_TEXT, message)
+            settingsCallSupportIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(getString(R.string.settingsCallSupportFrom)))
+            settingsCallSupportIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.settingsCallSupportSubject))
+            settingsCallSupportIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.settingsCallSupportMessage))
             startActivity(settingsCallSupportIntent)
         }
 
         // Кнопка пользовательское соглашение
         val settingsUserAgreementButton = findViewById<View>(R.id.settings_user_agreement)
         settingsUserAgreementButton.setOnClickListener {
-            val url = Uri.parse("https://yandex.ru/legal/practicum_termsofuse/")
+            val url = Uri.parse (getString(R.string.settingsShareButtonPrompt))
             val settingsUserAgreementintent = Intent(Intent.ACTION_VIEW, url)
             startActivity(settingsUserAgreementintent)
         }

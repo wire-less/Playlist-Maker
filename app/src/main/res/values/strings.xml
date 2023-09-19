@@ -10,4 +10,13 @@
     <string name="set_share_app_text">Поделиться приложением</string>
     <string name="set_call_support_text">Написать в поддержку</string>
     <string name="set_users_agreement_text">Пользовательское соглашение</string>
+
+    <string name="settingsShareButtonPrompt">https://practicum.yandex.ru/android-developer/</string>
+
+    <string name="settingsCallSupportFrom">monitor1010@yandex.ru</string>
+    <string name="settingsCallSupportSubject">Сообщение разработчикам и разработчицам приложения Playlist Maker</string>
+    <string name="settingsCallSupportMessage">Спасибо разработчикам и разработчицам за крутое приложение!</string>
+
+    <string name="settingsUserAgreementButtonPrompt">https://yandex.ru/legal/practicum_termsofuse/</string>
+
 </resources>
