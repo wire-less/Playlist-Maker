@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textColor="@color/red"
-        android:text="Открыт экран Media Library"/>
+        android:text="Открыт экран Media Library"
+        android:textColor="@color/red" />
 
 </FrameLayout>

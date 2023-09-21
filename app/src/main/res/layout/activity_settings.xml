@@ -12,82 +12,48 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/settings_back"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:backgroundTint="@color/white"
+        android:layout_height="56dp"
+        android:background="@color/white"
         android:text="@string/settings_text"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textColor="@color/yp_black"
         android:textSize="22sp"
-        style="?android:attr/borderlessButtonStyle"
-        android:visibility="visible"
-        app:cornerRadius="0dp"
         app:icon="@drawable/settings_back_icon"
         app:iconGravity="start"
+        app:iconSize="@dimen/anyActivityBackArrowSize"
         app:iconTint="@color/yp_black" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/settings_dark_mode"
+        style="@style/SettingsActivityButtonStyle"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/activitySettingsButtonSize"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="@dimen/activitySettingsTopMargin"
         android:checked="false"
-        android:fontFamily="sans-serif-medium"
         android:text="@string/set_dark_theme_text"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textColor="@color/yp_black"
-        android:textSize="@dimen/activitySettingsTextSize"
-        app:useMaterialThemeColors="false"
         app:thumbTint="@color/yp_gray"
         app:trackTint="@color/yp_light_gray" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/settings_share"
+        style="@style/SettingsActivityButtonStyle"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/activitySettingsButtonSize"
-        android:layout_marginLeft="@dimen/activitySettingsLeftMargin"
-        android:layout_marginTop="@dimen/activitySettingsTopMargin"
-        android:backgroundTint="@color/white"
         android:text="@string/set_share_app_text"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textColor="@color/yp_black"
-        android:textSize="@dimen/activitySettingsTextSize"
-        style="?android:attr/borderlessButtonStyle"
         app:icon="@drawable/settings_share_app_icon"
-        app:iconGravity="end"
-        app:iconTint="@color/yp_light_gray" />
+        app:iconGravity="end" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/settings_call_support"
+        style="@style/SettingsActivityButtonStyle"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/activitySettingsButtonSize"
-        android:layout_marginLeft="@dimen/activitySettingsLeftMargin"
-        android:layout_marginTop="@dimen/activitySettingsTopMargin"
-        android:backgroundTint="@color/white"
         android:text="@string/set_call_support_text"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textColor="@color/yp_black"
-        android:textSize="@dimen/activitySettingsTextSize"
-        style="?android:attr/borderlessButtonStyle"
         app:icon="@drawable/settings_call_support_icon"
-        app:iconGravity="end"
-        app:iconTint="@color/yp_light_gray" />
+        app:iconGravity="end" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/settings_user_agreement"
+        style="@style/SettingsActivityButtonStyle"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/activitySettingsButtonSize"
-        android:layout_marginLeft="@dimen/activitySettingsLeftMargin"
-        android:layout_marginTop="@dimen/activitySettingsTopMargin"
-        android:backgroundTint="@color/white"
         android:text="@string/set_users_agreement_text"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textColor="@color/yp_black"
-        android:textSize="@dimen/activitySettingsTextSize"
-        style="?android:attr/borderlessButtonStyle"
         app:icon="@drawable/settings_user_agreement_icon"
-        app:iconGravity="end"
-        app:iconTint="@color/yp_light_gray"
-        tools:visibility="gone" />
+        app:iconGravity="end" />
 </LinearLayout>

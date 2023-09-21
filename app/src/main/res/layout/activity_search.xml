@@ -1,18 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_search"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:outlineProvider="none"
     tools:context=".SearchActivity">
 
-    <TextView
-        android:id="@+id/activitySearchOnScreenMessage"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/search_back"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textColor="@color/red"
-        android:text="Открыт экран Search"/>
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:text="@string/search_text"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/yp_black"
+        android:textSize="22sp"
+        app:icon="@drawable/settings_back_icon"
+        app:iconGravity="start"
+        app:iconSize="@dimen/anyActivityBackArrowSize"
+        app:iconTint="@color/yp_black" />
 
-</FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+    <EditText
+        android:id="@+id/activitySearchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:hint="@string/search_text"
+        android:inputType="textAutoComplete"
+        android:maxLength="100"
+        android:maxLines="1"
+        android:textColor="@color/yp_gray"
+        android:textColorHint="@color/yp_gray"
+        android:textSize="18sp"
+        app:icon="@drawable/search_icon"
+        app:iconGravity="start"
+        app:iconSize="52dp"
+        app:iconTint="@color/yp_gray" />
+
+    <ImageView
+        android:id="@+id/activitySearchClearIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:visibility="gone"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"/>
+    </FrameLayout>
+</LinearLayout>
