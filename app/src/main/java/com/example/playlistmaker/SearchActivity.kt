@@ -11,9 +11,9 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
 
-class SearchActivity : AppCompatActivity() {
+var searchInputText: String = ""
 
-    var searchInputText: String = ""
+class SearchActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putString(SEARCH_INPUT_TEXT, searchInputText)
@@ -21,8 +21,10 @@ class SearchActivity : AppCompatActivity() {
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        searchInputText = savedInstanceState.getString(SEARCH_INPUT_TEXT, "")
         super.onRestoreInstanceState(savedInstanceState)
+        searchInputText = savedInstanceState.getString(SEARCH_INPUT_TEXT).toString()
+        val activitySearchEditText = findViewById<EditText>(R.id.activitySearchEditText)
+        activitySearchEditText.setText(searchInputText)
      }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +37,9 @@ class SearchActivity : AppCompatActivity() {
         val activitySearchLinearLayout = findViewById<LinearLayout>(R.id.container_search)
         val activitySearchEditText = findViewById<EditText>(R.id.activitySearchEditText)
         val activitySearchClearIcon = findViewById<ImageView>(R.id.activitySearchClearIcon)
+        activitySearchEditText.setText(searchInputText)
 
+        // Кнопка для стирания ввода и скрытия клавиатуры
         activitySearchClearIcon.setOnClickListener {
             activitySearchEditText.setText("")
             val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
@@ -45,6 +49,7 @@ class SearchActivity : AppCompatActivity() {
             }
          }
 
+        // Обработка ввода текста
         val activitySearchTextWatcher = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
                 // empty
@@ -70,7 +75,6 @@ class SearchActivity : AppCompatActivity() {
                     View.VISIBLE
                 }
             }
-
         }
         activitySearchEditText.addTextChangedListener(activitySearchTextWatcher)
     }
@@ -79,3 +83,5 @@ class SearchActivity : AppCompatActivity() {
         const val SEARCH_INPUT_TEXT = "SEARCH_INPUT_TEXT"
     }
 }
+
+
